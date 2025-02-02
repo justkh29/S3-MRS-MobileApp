@@ -2,48 +2,50 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:s3_hcmut/core/configs/assets/app_images.dart';
 import 'package:s3_hcmut/core/configs/assets/app_vectors.dart';
-class SplashPage extends StatelessWidget {
+import 'package:s3_hcmut/presentation/intro/pages/get_started.dart';
+
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    redirect();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // Hình ảnh đầu tiên
+          Container(
+              padding: EdgeInsets.symmetric(vertical: 80),
+              // Hình ảnh đầu tiên
+              child: Column(children: [
+                Align(alignment: Alignment.center, child: Image.asset(AppImages.logo)),
+              ])),
           Positioned(
-            left: 76,  // Khoảng cách từ trái
-            top: 241,  // Khoảng cách từ trên xuống
-            child: Image.asset(
-              AppImages.logo,
-              width: 268,  // Chỉnh kích thước ảnh nếu cần
-              height: 192,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: FittedBox(
+                fit: BoxFit.fitWidth, 
+                child: Image.asset(AppImages.bottom_logo),
+              ),
             ),
-          ),
 
-          // Hình ảnh thứ hai
-          Positioned(
-            left: 161, // Khoảng cách từ phải
-            top: 625,  // Khoảng cách từ trên xuống
-            child: Image.asset(
-             AppImages.iconic_logo,
-              width: 96, // Kích thước ảnh khác
-              height: 68,
-            ),
-          ),
-
-          // Văn bản
-          Positioned(
-            left: 0,  // Khoảng cách từ trái
-            top: 600, // Khoảng cách từ dưới lên
-            child: Image.asset(
-              AppImages.bottom_logo,
-              width: 412, // Kích thước ảnh khác
-              height: 268
-            ),
-          ),
         ],
       ),
     );
+  }
+
+  Future<void> redirect() async {
+    await Future.delayed(const Duration(seconds: 2));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const GetStartedPage()));
   }
 }
