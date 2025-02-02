@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:s3_hcmut/common/widgets/buttons/basic_app_button.dart';
 import 'package:s3_hcmut/core/configs/assets/app_images.dart';
+import 'package:s3_hcmut/presentation/choose_mode/pages/choose_mode.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
@@ -19,7 +20,7 @@ class GetStartedPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: -100, // Điều chỉnh vị trí theo nhu cầu
+            bottom: -50, // Điều chỉnh vị trí theo nhu cầu
             left: 0,
             right: 0,
             child: Center(
@@ -54,7 +55,12 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   BasicAppButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const LoginPage()),
+                      );
+                    },
                     title: 'Bắt đầu',
                   ),
                 ],
