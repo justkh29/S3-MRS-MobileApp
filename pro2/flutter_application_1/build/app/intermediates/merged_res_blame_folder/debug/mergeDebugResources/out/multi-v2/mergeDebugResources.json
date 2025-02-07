@@ -34,7 +34,7 @@
             "outputFile": "com.example.flutter_application_1.app-debug-26:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\HK242\\Soft_Ware_Tech\\Assignment\\HCMUT\\pro2\\flutter_application_1\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\HK242\\Soft_Ware_Tech\\Assignment\\pro2\\flutter_application_1\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -690,25 +690,6 @@
                     }
                 },
                 {
-                    "source": "D:\\HK242\\Soft_Ware_Tech\\Assignment\\HCMUT\\pro2\\flutter_application_1\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "155,159",
-                        "startColumns": "4,4",
-                        "startOffsets": "7894,8075",
-                        "endLines": "158,161",
-                        "endColumns": "12,12",
-                        "endOffsets": "8070,8239"
-                    }
-                },
-                {
                     "source": "C:\\Users\\84859\\.gradle\\caches\\transforms-3\\8667d3e81612a5cf442a0d22eca35926\\transformed\\lifecycle-viewmodel-2.7.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -831,6 +812,25 @@
                         "startOffsets": "6991",
                         "endColumns": "53",
                         "endOffsets": "7040"
+                    }
+                },
+                {
+                    "source": "D:\\HK242\\Soft_Ware_Tech\\Assignment\\pro2\\flutter_application_1\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "155,159",
+                        "startColumns": "4,4",
+                        "startOffsets": "7894,8075",
+                        "endLines": "158,161",
+                        "endColumns": "12,12",
+                        "endOffsets": "8070,8239"
                     }
                 }
             ]
