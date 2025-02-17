@@ -7,6 +7,28 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.lightBackground,
     brightness: Brightness.light,
     fontFamily: 'Satoshi',
+    //feild
+    inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Colors.transparent,
+        hintStyle: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w500,
+        ),
+        contentPadding: EdgeInsets.all(15),
+        border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(
+          color: Colors.black,
+          width: 0.4),
+        ),
+        enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(
+          color: Colors.black,
+          width: 0.4),
+        )
+      ),
     //button
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
