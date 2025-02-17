@@ -3,6 +3,7 @@ import 'package:flutter_application_1/common/widgets/appbar/app_bar.dart';
 import 'package:flutter_application_1/common/widgets/buttons/basic_app_button.dart';
 import 'package:flutter_application_1/core/configs/assets/app_images.dart';
 import 'package:flutter_application_1/presentation/auth/pages/signin.dart';
+import 'package:flutter_application_1/presentation/choose_mode/pages/choose_mode.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -10,14 +11,27 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _SiginText(context),
-      appBar: BasicAppBar(
-        title: Image.asset(
-          AppImages.logo_start,
-          height: 40,
-          width: 40,
-        ),
+    bottomNavigationBar: _SiginText(context),
+    appBar: AppBar(
+      backgroundColor: Colors.white,
+      centerTitle: true,
+      leading: IconButton(
+      icon: Icon(Icons.arrow_left_outlined),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const LoginPage()),
+          );
+        },
       ),
+      title: Image.asset(
+        AppImages.logo_start,
+        height: 40,
+        width: 40,
+      ),
+),
+
+
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 50, horizontal: 30),
         child: Column(
