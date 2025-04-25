@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common/widgets/appbar/app_bar.dart';
+//import 'package:flutter_application_1/common/widgets/appbar/app_bar.dart';
 import 'package:flutter_application_1/common/widgets/buttons/basic_app_button.dart';
 import 'package:flutter_application_1/core/configs/assets/app_images.dart';
 import 'package:flutter_application_1/core/configs/theme/app_colors.dart';
 import 'package:flutter_application_1/presentation/auth/pages/signup.dart';
+import 'package:flutter_application_1/presentation/choose_mode/pages/choose_mode.dart';
 
 class SigninPage extends StatelessWidget {
   const SigninPage({super.key});
@@ -12,7 +13,18 @@ class SigninPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: _SignupText(context),
-      appBar: BasicAppBar(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_left_outlined),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const LoginPage()),
+            );
+          },
+        ),
         title: Image.asset(
           AppImages.logo_start,
           height: 40,
@@ -110,7 +122,7 @@ class SigninPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SignupPage()),
+                MaterialPageRoute(builder: (context) => SignupPage()),
               );
             },
             child: const Text(

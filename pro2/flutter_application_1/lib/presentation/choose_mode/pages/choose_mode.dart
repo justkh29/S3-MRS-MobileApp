@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/common/widgets/appbar/app_bar.dart';
+//import 'package:flutter_application_1/common/widgets/appbar/app_bar.dart';
 import 'package:flutter_application_1/common/widgets/buttons/basic_app_button.dart';
-import 'package:flutter_application_1/core/configs/assets/app_images.dart';
+//import 'package:flutter_application_1/core/configs/assets/app_images.dart';
 import 'package:flutter_application_1/core/configs/assets/app_vectors.dart';
 import 'package:flutter_application_1/presentation/auth/pages/signup.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_application_1/core/configs/theme/app_colors.dart';
 import 'package:flutter_application_1/presentation/auth/pages/signin.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -15,7 +16,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         body: Stack(
       children: [
-        const BasicAppBar(),
+        //const BasicAppBar(),
         Align(
           alignment: Alignment.center,
           child: Padding(
@@ -34,7 +35,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const SignupPage()),
+                              MaterialPageRoute(builder: (context) => SignupPage()),
                             );
                           },
                           title: 'Register'),
@@ -46,9 +47,9 @@ class LoginPage extends StatelessWidget {
                           backgroundColor: AppColors.primary,
                           foregroundColor: Colors.white,
                           onPressed: () {
-                            Navigator.push(    
+                            Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const SigninPage()),
+                              MaterialPageRoute(builder: (context) => SigninPage()),
                             );
                           },
                           title: 'Sign in'),
