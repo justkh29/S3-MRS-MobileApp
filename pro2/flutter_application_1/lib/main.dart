@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/configs/theme/app_theme.dart';
+import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/presentation/splash/pages/splash.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_core/firebase_core.dart';
+//import 'firebase_options.dart';
+import 'service_locator.dart';
 
-void main() => runApp(DevicePreview(
-      enabled: true,
-      tools: [...DevicePreview.defaultTools],
-      builder: (context) => MyApp(),
-    ));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Đảm bảo các widget được khởi tạo
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform); // Khởi tạo Firebase
+  await initializeDependencies(); // Khởi tạo các phụ thuộc
+  runApp(DevicePreview(
+    enabled: true,
+    tools: [...DevicePreview.defaultTools],
+    builder: (context) => MyApp(),
+  ));
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
