@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/domain/usecases/auth/sigin.dart';
 import 'package:flutter_application_1/domain/usecases/auth/signup.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_application_1/data/sources/auth/auth_firebase_service.dart';
@@ -13,4 +14,6 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<AuthRepository>(AuthRepositoryImpl());
 
   sl.registerSingleton<SignupUseCase>(SignupUseCase());
+
+  sl.registerSingleton<SigninUseCase>(SigninUseCase());
 }
