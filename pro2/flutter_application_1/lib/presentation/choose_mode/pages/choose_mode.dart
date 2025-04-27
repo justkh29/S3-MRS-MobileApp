@@ -25,7 +25,9 @@ class LoginPage extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 120, horizontal: 90),
-                  child: Align(alignment: Alignment.topCenter, child: SvgPicture.asset(AppVectors.account)),
+                  child: Align(
+                      alignment: Alignment.topCenter,
+                      child: SvgPicture.asset(AppVectors.account)),
                 ),
                 Row(
                   children: [
@@ -35,7 +37,8 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SignupPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SignupPage()),
                             );
                           },
                           title: 'Register'),
@@ -49,7 +52,8 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SigninPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SigninPage()),
                             );
                           },
                           title: 'Sign in'),
